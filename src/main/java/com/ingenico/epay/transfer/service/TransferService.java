@@ -4,6 +4,6 @@ import java.math.BigDecimal;
 
 public interface TransferService {
 
-	public void transfer(String from, String to, BigDecimal amount) throws TransferException;
+	public void transfer(String source, String target, BigDecimal amount) throws TransferException;
 
 }

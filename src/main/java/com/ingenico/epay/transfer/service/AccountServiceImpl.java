@@ -63,7 +63,7 @@ public class AccountServiceImpl implements AccountService {
 		synchronized (account) {
 			BigDecimal balance = account.getBalance();
 			balance = balance.subtract(amount);
-			if (BigDecimal.ZERO.compareTo(balance) >= 0) {
+			if (BigDecimal.ZERO.compareTo(balance) <= 0) {
 				account.setBalance(balance);
 			} else {
 				throw new AccountException("Amount " + amount + " not available for account " + account.getName());
